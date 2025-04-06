@@ -13,7 +13,7 @@ header, h2, h3, h4 {
 }
 
 nav ul {
-    list-style: beige;
+    list-style: none;
     padding: 0;
 }
 
@@ -23,7 +23,7 @@ nav ul li {
 }
 
 nav ul li a {
-    text-decoration: beige;
+    text-decoration: none;
     color: hsl(108, 100%, 52%);
 }
 
@@ -49,6 +49,7 @@ footer {
     display: flex;
     justify-content: space-around;
     margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
 button {
@@ -60,9 +61,11 @@ button {
     cursor: pointer;
     width: 100%;
 }
+
 button:hover {
     background-color: #003f5f;
 }
+
 input[type="text"], input[type="email"] {
     width: 100%;
     padding: 10px;
@@ -70,6 +73,7 @@ input[type="text"], input[type="email"] {
     border: none;
     border-radius: 5px;
 }
+
 .contact-form {
     background-color: #6db3e1;
     border-radius: 5px;
@@ -77,19 +81,15 @@ input[type="text"], input[type="email"] {
     max-width: 400px;
     margin: auto;
 }
+
 .info-box {
     background-color: #2ca3e0;
     border-radius: 5px;
     padding: 15px;
     text-align: center;
     width: 20%;
+    margin: 10px;
 }
-.contact-info {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
-}
-
 
 h5 {
     margin-bottom: 10px;
@@ -104,4 +104,47 @@ h5 {
     width: 150px; 
     height: 150px;
     border-radius: 1px;
+}
+
+/* RESPONSIVE STYLES BELOW */
+@media screen and (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-box {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .contact-form {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .social img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h2, h3, h4 {
+        font-size: 1.2em;
+    }
+
+    button {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+
+    input[type="text"], input[type="email"] {
+        font-size: 0.9em;
+    }
 }
