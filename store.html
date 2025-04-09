@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Robux Purchase Page</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+  <div class="container">
+    <div class="card">
+      <div class="product-header">
+        <img src="robux.jpg" alt="Robux Icon" />
+        <h2>Robux</h2> 
+      </div>
+
+      <div class="seller-info">
+        <img src="robuxseller.jpg" alt="Seller Profile">
+        <div>
+          <strong>Lyrain</strong> <span style="color: green;">✔</span><br>
+          <small>99.9% | 120+ reviews</small>
+        </div>
+      </div>
+
+      <div class="delivery-time">
+        <div>🛡️ Guaranteed delivery time: <strong>20 min</strong></div>
+        <div>⏱️ Average delivery time: <strong>3 min</strong></div>
+      </div>
+
+      <div class="note">
+        <p>No ingame gifting if less than 10k</p>
+        <p>We won't cover the 30% tax (if you buy 1k you will get 700)</p>
+        <p>Robux will be pending about 5 days...</p>
+        <p>Transaction will be posted as a proof</p>
+        <p>🤔 How to purchase ❓</p>
+        <p>1️⃣ Select Robux amount and make payment</p>
+        <p>2️⃣ Make a gamepass, t-shirt  and set the price to purchased amount</p>
+        <p>3️⃣ Send me link in chat</p>
+        <br>
+        <p>We do not offer any warranty due to RMT (Real Money Trade - Buy&Sell Robux) reasons. 
+            ● No refund after gamepass is bought</p>
+      </div>
+    </div>
+
+    <!-- Right Card: Purchase Panel -->
+    <div class="card price-card">
+      <div>Price per unit:</div>
+      <div class="price">P270/Per 1,000</div>
+
+      <div class="qty-input">
+        <label for="qty">Qty:</label>
+        <input type="number" id="qty" value="1000" min="1000" />
+      </div>
+
+      <button class="btn">P270 PESOS | Buy now</button>
+
+      <div class="secure">
+        🔒 100% Secure Payments guarantee by <strong>TradeMarket</strong>
+      </div>
+      <br>
+      <br>
+      <div>
+        <input type="text" placeholder="Link of Gamepasses || example  https://www.roblox.com/game-pass/18967459/THANK-YOU" required>
+        <input type="text" placeholder="Name of the User || example Lyrain" required>
+        <label for="userImage">Upload your Gcash Receipt:</label><br>
+<input type="file" id="userImage" name="userImage" accept="image/*" required>
+
+<!--image preview -->
+<img id="preview" style="display:none; width: 150px; margin-top: 10px;" />
+
+<script>
+  const input = document.getElementById('userImage');
+  const preview = document.getElementById('preview');
+
+  input.addEventListener('change', function() {
+    const file = this.files[0];
+    if (file) {
+      preview.src = URL.createObjectURL(file);
+      preview.style.display = 'block';
+    }
+  });
+</script>
+<p>GCASH NUMBER || 63+ 9948798423</p>
+<p>Receiver Name || MI*****A. A</p>
+<p>Double Check Before Sending. Thank you</p>
+      </div>
+    </div>
+   </div>          
+    </div>
+  </div>
+  <nav>
+    <ul>
+        <li><a href="index.html">Back or Return</a></li>
+    </ul>
+
+</body>
+</html>
